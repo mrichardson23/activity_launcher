@@ -60,7 +60,6 @@ count = count + 1
 config['Data']['count'] = str(count)
 with open(home_path + 'config.ini', 'w') as configfile:
 	config.write(configfile)
-print(config['Data']['count'])
 
 # Move IDE configuration files into place
 shutil.copyfile(home_path + config['Activity']['freshIDEConfigFileName'], config['Activity']['IDEConfigDestination'] + config['Activity']['IDEConfigFileName'] )
