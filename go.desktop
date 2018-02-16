@@ -2,7 +2,7 @@
 Name=Get Started!
 Comment=Start your journey with coding here!
 Icon=/home/pi/.activity_launcher/icon.png
-Exec=python3 /home/pi/.activity_launcher/launcher.py
+Exec=python3 /home/pi/.activity_launcher/launch.py
 Type=Application
 Encoding=UTF-8
 Terminal=false
