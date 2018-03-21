@@ -1,3 +1,5 @@
+# This is used for possible future functionality where tips can appear next to the Thonny window.
+
 import subprocess
 from time import sleep
 
