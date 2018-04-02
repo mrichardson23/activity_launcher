@@ -13,10 +13,11 @@ home_path = os.path.dirname(os.path.realpath(__file__)) + "/"
 config = configparser.ConfigParser()
 config.read(home_path + 'config.ini')
 
-# Close Thonny forcefully if it's open:
-activityProcess = subprocess.run(["sudo", "killall", "thonny"])
+# Close Thonny and any running sparkle programs forcefully if open:
+os.system("pgrep -f myProgram | xargs kill")
+# (this is a total hack. Killing thonny alone doesn't kill running sparkles.)
 
-#clear the Sense HAT
+# Clear the Sense HAT
 from sense_hat import SenseHat
 sense = SenseHat()
 sense.clear()
