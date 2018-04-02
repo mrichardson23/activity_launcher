@@ -16,6 +16,11 @@ config.read(home_path + 'config.ini')
 # Close Thonny forcefully if it's open:
 activityProcess = subprocess.run(["sudo", "killall", "thonny"])
 
+#clear the Sense HAT
+from sense_hat import SenseHat
+sense = SenseHat()
+sense.clear()
+
 #### Splash Screen ####
 if config['SplashScreen']['enabled'] == "True":
 	splashApp = App(width=int(config['SplashScreen']['imageWidth']), height=int(config['SplashScreen']['imageHeight']), title=config['SplashScreen']['titleBarCaption'])
