@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Get Started!
-Comment=Start your journey with coding here!
+Name=Double-click here!
+Comment=Start your journey with coding!
 Icon=/home/pi/.activity_launcher/icon.png
 Exec=python3 /home/pi/.activity_launcher/launch.py
 Type=Application
