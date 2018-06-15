@@ -36,7 +36,7 @@ if config['SplashScreen']['enabled'] == "True":
 
 	def onKeyPress(event):
 		# This will show the number of launches in the menu bar.
-		if event.char == "C":
+		if event.key == "C":
 			splashApp.title = (config['Data']['count'])
 
 	def nextFrame():
@@ -50,9 +50,12 @@ if config['SplashScreen']['enabled'] == "True":
 
 	currentFrame = 1
 	picture = Picture(splashApp, image=home_path + str(currentFrame) + config['SplashScreen']['imageFile'])
+	# scale the picture so its the same as the app
+	picture.width = splashApp.width
+	picture.height = splashApp.height
 	timer = picture.after( int(config['SplashScreen']['animateSecondsPerFrame']) * 1000, nextFrame ) # kick off the animation
-	splashApp.tk.bind("<Key>", onKeyPress) # bind keypresses to the handler
-	splashApp.tk.bind("<Button-1>", onClick) # Bind mouseclicks to the handler
+	splashApp.when_key_pressed = onKeyPress
+	splashApp.when_clicked = onClick
 	splashApp.display()
 
 #### IDE Launch ####
