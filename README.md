@@ -37,6 +37,8 @@ Uncheck the "show" box next to Games if you wish to hide that
 
 Click Edit... Preferences
 
+Under General, check/tick "Don't ask options on launch executable file"
+
 Under Display, update size of large icons to 96 x 96 
 
 **Open the file:** `/home/pi/.config/pcmanfm/LXDE-pi/desktop-items-0.conf`
